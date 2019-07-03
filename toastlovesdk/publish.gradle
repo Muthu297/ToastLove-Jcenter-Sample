@@ -1,14 +1,14 @@
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-version '1.0.1'
-group 'com.asmrk.toastlove'
+version '1.0.2'
+group 'com.asmrk.toastlovesdk'
 
 publishing {
     publications {
         Production(MavenPublication) {
             artifact("$buildDir/outputs/aar/toastlovesdk-release.aar")
-            groupId
+            groupId this.group
             artifactId 'toastlovesdk'
             version this.version
 
@@ -44,8 +44,8 @@ bintray {
     override = true
     pkg {
         repo = 'maven'
-        name = 'com.asmrk.toastlove'
-        description = "JCenter Upload Practices"
+        name = 'com.asmrk.toastlovesdk'
+        description = "JCenter Upload Practices 2"
         publish = true
         publicDownloadNumbers = true
         licenses = ['Apache-2.0']
