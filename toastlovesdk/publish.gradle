@@ -7,7 +7,7 @@ group 'com.asmrk.toastlove'
 publishing {
     publications {
         Production(MavenPublication) {
-            artifact("$buildDir/outputs/aar/app-release.aar")
+            artifact("$buildDir/outputs/aar/toastlovesdk-release.aar")
             groupId
             artifactId 'toastlovesdk'
             version this.version
